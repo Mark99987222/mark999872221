@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Task Bot Mini App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Подключаем CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключаем Telegram Web Apps JS API -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Мои Задачи</h1>
+        <div id="task-list"></div>
+        <button id="add-task-btn">Добавить Задачу</button>
+    </div>
+
+    <!-- Модальное окно для добавления задачи -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2>Новая Задача</h2>
+            <input type="text" id="task-name" placeholder="Название задачи">
+            <input type="date" id="task-due-date" placeholder="Срок">
+            <select id="task-priority">
+                <option value="Низкий">Низкий</option>
+                <option value="Средний">Средний</option>
+                <option value="Высокий">Высокий</option>
+            </select>
+            <button id="save-task-btn">Сохранить</button>
+        </div>
+    </div>
+
+    <!-- Подключаем JS -->
+    <script src="app.js"></script>
+</body>
+</html>
